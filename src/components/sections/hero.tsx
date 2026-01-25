@@ -38,7 +38,8 @@ export default function HeroSection() {
       ref={sectionRef}
       className="relative w-full py-24 md:py-32 lg:py-40 overflow-hidden opacity-0"
     >
-      <div className="container mx-auto px-4 text-center">
+      <div className="blob -z-10 top-1/4 left-1/2 -translate-x-1/2 opacity-30" />
+      <div className="container mx-auto px-4 text-center relative z-10">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground">
           We Build Websites
           <br />
