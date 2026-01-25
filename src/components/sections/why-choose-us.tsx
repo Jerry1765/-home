@@ -5,7 +5,7 @@ import { CheckCircle2, Zap, Smartphone, Search, CircleDollarSign, LifeBuoy } fro
 import { cn } from "@/lib/utils";
 
 const benefits = [
-  { icon: Zap, text: "Fast delivery (24–72 hours)" },
+  { icon: Zap, text: "Fast Delivery" },
   { icon: Smartphone, text: "Mobile-friendly design" },
   { icon: Search, text: "SEO optimized" },
   { icon: CircleDollarSign, text: "Affordable pricing" },

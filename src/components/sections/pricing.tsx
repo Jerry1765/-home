@@ -10,7 +10,7 @@ import Link from 'next/link';
 const pricingPlans = [
   {
     name: "Starter",
-    price: "₹999",
+    price: "₹499",
     description: "Perfect for a quick online start.",
     features: ["1 page website", "Mobile responsive", "Contact form"],
     isPopular: false,

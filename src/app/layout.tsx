@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Aesthetic Web Studio | We Build Aesthetic Websites That Grow Your Business',
+  title: 'Aesthetic Web Studio | We Build Websites That Grow Your Business',
   description: 'Professional, fast and affordable websites for small businesses in India. We provide website design services to restaurants, shops, creators, and startups.',
   keywords: 'website design, small business website, affordable website India, web development, aesthetic websites, restaurant website, portfolio website',
 };

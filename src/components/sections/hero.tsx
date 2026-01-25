@@ -48,7 +48,7 @@ export default function HeroSection() {
       
       <div className="container mx-auto px-4 text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground">
-          We Build Aesthetic Websites
+          We Build Websites
           <br />
           That <span className="text-primary">Grow Your Business</span>
         </h1>
