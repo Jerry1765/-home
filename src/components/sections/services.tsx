@@ -66,10 +66,10 @@ export default function ServicesSection() {
             return (
               <Card
                 key={index}
-                className="text-center p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-2"
+                className="group text-center p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-2"
               >
                 <CardHeader className="items-center p-0">
-                  <div className="bg-primary/20 p-4 rounded-full mb-4">
+                  <div className="bg-primary/20 p-4 rounded-full mb-4 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/30">
                     <Icon className="h-8 w-8 text-primary" />
                   </div>
                   <CardTitle className="text-xl font-semibold mb-2">{service.title}</CardTitle>

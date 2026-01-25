@@ -7,6 +7,7 @@ import PricingSection from '@/components/sections/pricing';
 import PortfolioSection from '@/components/sections/portfolio';
 import TestimonialsSection from '@/components/sections/testimonials';
 import ContactSection from '@/components/sections/contact';
+import SectionWaveDivider from '@/components/ui/SectionWaveDivider';
 
 export default function Home() {
   return (
@@ -14,10 +15,19 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <HeroSection />
+        <div className="relative">
+          <SectionWaveDivider />
+        </div>
         <ServicesSection />
         <WhyChooseUsSection />
+        <div className="relative">
+          <SectionWaveDivider />
+        </div>
         <PricingSection />
         <PortfolioSection />
+        <div className="relative">
+          <SectionWaveDivider />
+        </div>
         <TestimonialsSection />
         <ContactSection />
       </main>
