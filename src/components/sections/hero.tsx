@@ -37,15 +37,10 @@ export default function HeroSection() {
       id="home"
       ref={sectionRef}
       className={cn(
-        "relative w-full py-24 md:py-32 lg:py-40 transition-all duration-1000 ease-in-out",
+        "relative w-full py-24 md:py-32 lg:py-40 transition-all duration-1000 ease-in-out overflow-hidden",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       )}
     >
-      <div 
-        aria-hidden="true" 
-        className="absolute inset-0 -z-10 bg-gradient-to-br from-background via-secondary to-background"
-      />
-      
       <div className="container mx-auto px-4 text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground">
           We Build Websites
