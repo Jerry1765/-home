@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect } from 'react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
@@ -33,14 +33,13 @@ const pricingPlans = [
 
 export default function PricingSection() {
     const sectionRef = useRef<HTMLElement>(null);
-    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
       const observer = new IntersectionObserver(
         (entries) => {
           if (entries[0].isIntersecting) {
-            setIsVisible(true);
-            observer.unobserve(sectionRef.current!);
+            entries[0].target.classList.add('fade-up');
+            observer.unobserve(entries[0].target);
           }
         },
         { threshold: 0.1 }
@@ -61,10 +60,7 @@ export default function PricingSection() {
     <section 
       id="pricing"
       ref={sectionRef}
-      className={cn(
-        "py-16 md:py-24 bg-secondary transition-all duration-700 ease-in-out",
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-      )}
+      className="py-16 md:py-24 bg-secondary opacity-0"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">

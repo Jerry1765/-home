@@ -1,21 +1,21 @@
 "use client";
 
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect } from 'react';
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    // The hero section is visible on load, so we can start the animation right away.
+    // However, to keep it consistent with other sections, we'll use the observer.
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(sectionRef.current!);
+          entries[0].target.classList.add('fade-up');
+          observer.unobserve(entries[0].target);
         }
       },
       { threshold: 0.1 }
@@ -36,10 +36,7 @@ export default function HeroSection() {
     <section
       id="home"
       ref={sectionRef}
-      className={cn(
-        "relative w-full py-24 md:py-32 lg:py-40 transition-all duration-1000 ease-in-out overflow-hidden",
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      )}
+      className="relative w-full py-24 md:py-32 lg:py-40 overflow-hidden opacity-0"
     >
       <div className="container mx-auto px-4 text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground">

@@ -1,11 +1,10 @@
 "use client";
 
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect } from 'react';
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { cn } from "@/lib/utils";
 
 const testimonials = [
   {
@@ -32,14 +31,13 @@ const userImages = PlaceHolderImages.filter(img => img.id.startsWith('user'));
 
 export default function TestimonialsSection() {
     const sectionRef = useRef<HTMLElement>(null);
-    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
       const observer = new IntersectionObserver(
         (entries) => {
           if (entries[0].isIntersecting) {
-            setIsVisible(true);
-            observer.unobserve(sectionRef.current!);
+            entries[0].target.classList.add('fade-up');
+            observer.unobserve(entries[0].target);
           }
         },
         { threshold: 0.1 }
@@ -60,10 +58,7 @@ export default function TestimonialsSection() {
     <section 
       id="testimonials"
       ref={sectionRef}
-      className={cn(
-        "py-16 md:py-24 bg-secondary transition-all duration-700 ease-in-out",
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-      )}
+      className="py-16 md:py-24 bg-secondary opacity-0"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">

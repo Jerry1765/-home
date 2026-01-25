@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -28,7 +28,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail } from 'lucide-react';
 import WhatsappIcon from '@/components/icons/whatsapp-icon';
-import { cn } from '@/lib/utils';
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -45,14 +44,13 @@ const formSchema = z.object({
 
 export default function ContactSection() {
     const sectionRef = useRef<HTMLElement>(null);
-    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
       const observer = new IntersectionObserver(
         (entries) => {
           if (entries[0].isIntersecting) {
-            setIsVisible(true);
-            observer.unobserve(sectionRef.current!);
+            entries[0].target.classList.add('fade-up');
+            observer.unobserve(entries[0].target);
           }
         },
         { threshold: 0.1 }
@@ -94,10 +92,7 @@ export default function ContactSection() {
     <section 
       id="contact"
       ref={sectionRef}
-      className={cn(
-        "py-16 md:py-24 transition-all duration-700 ease-in-out",
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-      )}
+      className="py-16 md:py-24 opacity-0"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
