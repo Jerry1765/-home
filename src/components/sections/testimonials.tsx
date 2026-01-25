@@ -11,7 +11,7 @@ const testimonials = [
   {
     name: "Priya Sharma",
     role: "Restaurant Owner",
-    review: "Aesthetic Web Studio transformed our online presence. Our new website is beautiful and our online orders have doubled! The process was fast and easy.",
+    review: "Site Spark transformed our online presence. Our new website is beautiful and our online orders have doubled! The process was fast and easy.",
     avatarId: "user-1",
   },
   {

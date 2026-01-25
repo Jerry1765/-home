@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Twitter, Instagram, Linkedin, Feather } from "lucide-react";
+import { Twitter, Instagram, Linkedin, Sparkles } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -7,13 +7,13 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2">
-            <Feather className="h-7 w-7 text-primary" />
+            <Sparkles className="h-7 w-7 text-primary" />
             <span className="text-xl font-bold text-foreground">
-              Aesthetic Web Studio
+              Site Spark
             </span>
           </div>
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Aesthetic Web Studio. All rights reserved.
+            &copy; {new Date().getFullYear()} Site Spark. All rights reserved.
           </p>
           <div className="flex gap-4">
             <Link href="#" aria-label="Twitter">

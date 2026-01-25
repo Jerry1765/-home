@@ -210,7 +210,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold">Email</h4>
-                  <p className="text-muted-foreground text-sm">contact@aestheticweb.studio</p>
+                  <p className="text-muted-foreground text-sm">contact@sitespark.studio</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">

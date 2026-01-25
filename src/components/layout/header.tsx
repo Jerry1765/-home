@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { Menu, X, Feather } from "lucide-react";
+import { Menu, X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -45,9 +45,9 @@ export default function Header() {
         <div className="flex h-20 items-center justify-between">
           <Link href="#home" passHref legacyBehavior>
             <a onClick={(e) => handleLinkClick(e, '#home')} className="flex items-center gap-2">
-              <Feather className="h-7 w-7 text-primary" />
+              <Sparkles className="h-7 w-7 text-primary" />
               <span className="text-xl font-bold tracking-tight text-foreground">
-                Aesthetic Web Studio
+                Site Spark
               </span>
             </a>
           </Link>
